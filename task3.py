@@ -16,7 +16,7 @@ while True:
 
     mask = cv.inRange(hsv, lower_green, upper_green)
 
-    contours, _ = cv.findContours(mask.copy(), cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
+    contours, _ = cv.findContours(mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
 
     for contour in contours:
         area = cv.contourArea(contour)
