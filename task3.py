@@ -16,9 +16,6 @@ while True:
 
     mask = cv.inRange(hsv, lower_green, upper_green)
 
-    mask = cv.erode(mask, None, iterations=2)
-    mask = cv.dilate(mask, None, iterations=2)
-
     contours, _ = cv.findContours(mask.copy(), cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
 
     for contour in contours:
